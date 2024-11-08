@@ -16,8 +16,7 @@ echo "Creating Data Factory..."
 az datafactory create \
     --resource-group $RESOURCE_GROUP \
     --name $DATA_FACTORY_NAME \
-    --location $LOCATION \
-    --identity
+    --location $LOCATION 
 
 if [ $? -eq 0 ]; then
     echo "Data factory $DATA_FACTORY_NAME created.."
@@ -26,5 +25,6 @@ else
     exit 1
 fi
 
+# Recuperer l identite managée eventuelle du Data factory
 
 

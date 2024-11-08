@@ -18,18 +18,35 @@ Modifiez `.env` avec vos paramètres Azure.
 
 ### 2. Créer le Groupe de Ressources
 
+```bash
+./scripts/create_resource_group.sh
+```
+
 ### 3. Créer les ressources Azure
+
+```bash
+./scripts/create_blob_storage_account.sh
+```
+
+```bash
+./scripts/create_data_lake.sh
+```
+
+```bash
+./scripts/create_data_factory.sh
+```
 
 ### 4. Téléchargez les données Sample
 
-### 5. Générer un SAS Token
+### 5. Générer les SAS Tokens
+
+```bash
+./scripts/generate_sas_token.sh
+```
 
 ### 6. Transférer les données locales vers le Blob Storage
 
 ### 7. Déployer le Pipeline
 
-```bash
-./scripts/create_resource_group.sh
-```
 
 
