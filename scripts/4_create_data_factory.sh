@@ -17,7 +17,7 @@ az datafactory create \
     --resource-group $RESOURCE_GROUP \
     --name $DATA_FACTORY_NAME \
     --location $LOCATION \
-    --identity-type "SystemAssigned"
+    --identity
 
 if [ $? -eq 0 ]; then
     echo "Data factory $DATA_FACTORY_NAME created.."
@@ -25,5 +25,6 @@ else
     echo "Failed to create Data Factory"
     exit 1
 fi
+
 
 
