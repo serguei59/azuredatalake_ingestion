@@ -11,10 +11,19 @@ else
     echo ".env not found, please create one filled with required variables"
 fi
 
-#data factory creation
+#data factory creation avec identité managée activée
 echo "Creating Data Factory..."
 az datafactory create \
     --resource-group $RESOURCE_GROUP \
     --name $DATA_FACTORY_NAME \
-    --location $LOCATION
-echo "Data factory $DATA_FACTORY_NAME created.."
+    --location $LOCATION \
+    --identity-type "SystemAssigned"
+
+if [ $? -eq 0 ]; then
+    echo "Data factory $DATA_FACTORY_NAME created.."
+else
+    echo "Failed to create Data Factory"
+    exit 1
+fi
+
+
