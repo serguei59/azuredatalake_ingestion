@@ -1,0 +1,31 @@
+{
+    "properties": {
+        "activities": [
+            {
+                "name": "CopyFromBlobToDataLake",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "BlobSource"
+                    },
+                    "sink": {
+                        "type": "AzureDataLakeStoreSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "BlobSourceDataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "DataLakeSinkDataset",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ],
+        "annotations": []
+    }
+}
