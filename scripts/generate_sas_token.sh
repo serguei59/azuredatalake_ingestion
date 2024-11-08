@@ -1,10 +1,15 @@
 #!/bin/bash
 
-#charger les variables d ' environnement
-if [ -f .env ]; then
-    source .env
+#chemin vers .env
+#$0 : représente le chemin du script actuellement exécuté
+#dirname "$0" : permet d'obtenir le répertoire où se trouve le script.
+ENV_FILE="$(dirname "$0")/../.env"
+#load existing environnment variables
+if [ -f "$ENV_FILE" ]; then
+    source "$ENV_FILE"
 else
-    echo ".env not found, please create one filled with required variables."
+    echo ".env not found, please create one filled with required variables"
+fi
 
 #durée de validité du SAS TOKEN=> a revoir(expiry)
 DURATION_IN_HOURS=24
