@@ -1,8 +1,9 @@
 {
+    "name": "BlobstorageToDataLakePipeline", 
     "properties": {
         "activities": [
             {
-                "name": "CopyFromBlobToDataLake",
+                "name": "CopyFromBlobstorageToDataLakePipeline",
                 "type": "Copy",
                 "typeProperties": {
                     "source": {
