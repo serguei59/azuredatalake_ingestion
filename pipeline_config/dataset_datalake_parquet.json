@@ -1,0 +1,15 @@
+{
+    "properties": {
+      "linkedServiceName": {
+        "referenceName": "DataLakeLinkedService",
+        "type": "LinkedServiceReference"
+      },
+      "type": "Parquet",
+      "typeProperties": {
+        "location": {
+          "type": "AzureDataLakeStorageLocation",
+          "folderPath": "input_df_abs_parquet"
+        }
+      }
+    }
+}

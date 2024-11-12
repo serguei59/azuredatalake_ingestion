@@ -7,21 +7,21 @@
                 "type": "Copy",
                 "typeProperties": {
                     "source": {
-                        "type": "BlobSource"
+                        "type": "BinarySource"
                     },
                     "sink": {
-                        "type": "AzureDataLakeStoreSink"
+                        "type": "ParquetSink"
                     }
                 },
                 "inputs": [
                     {
-                        "referenceName": "BlobSourceDataset",
+                        "referenceName": "BlobDataset",
                         "type": "DatasetReference"
                     }
                 ],
                 "outputs": [
                     {
-                        "referenceName": "DataLakeSinkDataset",
+                        "referenceName": "DataLakeParquetDataset",
                         "type": "DatasetReference"
                     }
                 ]

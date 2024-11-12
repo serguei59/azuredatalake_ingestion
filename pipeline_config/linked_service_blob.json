@@ -1,0 +1,8 @@
+{
+    "properties": {
+      "type": "AzureBlobStorage",
+      "typeProperties": {
+        "sasUri": "https://${STORAGE_ACCOUNT_NAME}.blob.core.windows.net/${BLOB_STORAGE_NAME}?${SAS_TOKEN_blobstorage}"
+      }
+    }
+}

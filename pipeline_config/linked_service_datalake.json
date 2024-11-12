@@ -1,0 +1,8 @@
+{
+    "properties": {
+      "type": "AzureDataLakeStorage",
+      "typeProperties": {
+        "sasUri": "https://${DATA_LAKE_NAME}.dfs.core.windows.net/${DATA_LAKE_CONTAINER_NAME}?${SAS_TOKEN_adls2container}"
+      }
+    }
+}
